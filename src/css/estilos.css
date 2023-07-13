@@ -1,0 +1,105 @@
+body{
+    font-family: "Oxanium", cursive;
+    background: #000;
+    color: #ffffff;
+
+}
+
+body::before{ /*defino um pesudo elemento, antes do body elecriará umpseudo elemento. tbm consigo criar um elemento html pelo css*/
+    content: "";
+    background-image: url(../imagens/bg-desktop.jpg); /*o .. é para voltar uma pasta, estamosno estilos.css, ai voltamos para o src e depois pega*/
+    background-repeat:no-repeat;
+    background-size: cover; /*tamanho do background, para cobrir, cobrir todo o tamanho do body com a imagem*/
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute; /*propriedade de posicionamento, vai ficar aboslutamnte posicionado, cria uma camada, folhas*/
+    z-index: -1; /*colocar no eixo z, o de profudindade, o body..before vai ficar atrás de tudo*/
+    opacity: 0.3;
+
+}
+
+.cabecalho{
+    display: flex; /*flexbox, teremos prpopriedades para estilizar tags pai e filho, para centralizar um filho, tem que mexer no pai*/
+    /*background-color: aqua;*/
+    justify-content: center; /*vai alinhar os elementos horizotalmente sempre que eu tiver usando o flex reaction row */
+}
+
+.selecao-de-personagens{  /*main*/
+    /*background-color: blueviolet;*/
+    display: flex; /*o padrão do flex é o row, linha, então pordefinição elejá colocar todos que estão não função com o flex na mesma linha, pode ser alterado tais definições no flex-direction:; */
+    align-items: center; /* alinhar os elementos verticalmente*/
+    gap: 30px; /*está separando os filhos, as tags sections que tem*/
+    min-height: calc(100vh - 152px); /*view portheight, janela de exibição, tela do navehador, altura da janela do navegador*/
+    justify-content: center;
+    
+}
+
+.selecao-de-personagens .lista-de-personagens{
+    display: flex;
+    /*background-color: brown;*/
+    flex-wrap: wrap; /*wrap é involver */
+    gap: 30px; /*figma, ferramenta criação de layout, parte visual, bom site para ver coisas na questão de pixels*/
+    justify-content: center; /*centralizar os elementos*/
+
+}
+
+.selecao-de-personagens .personagens{
+    /*background-color: darkslategray;*/
+    display: flex; /*colocou um do lado do outro, pqr é row*/
+    flex-direction: column; /* column é um em baixo do outro*/
+    align-items: center;
+    max-width: 585px; /*largura máxima desse elemento*/
+    gap: 25px; /*separar o título e a coluna browm dos personagens*/
+}
+
+.selecao-de-personagens .personagens .titulo{
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase; /*maiúsculo*/
+    border-bottom: 2px solid #47f4ff; /*bordar bottom, para baixo, tem up, right e afins*/
+    width: 100%;
+    text-align: center; /*alinhar o texto no meio */
+
+}
+
+.lista-de-personagens .personagem img{
+    width: 100%;
+    height: 100%; /*não altera em nada, mas vai evitar que a s imagens fiquem muito desfocada, ou quebrada*/
+}
+
+.lista-de-personagens .personagem.selecionado{ /*esse elemento tem duas classes,por isso aplica a regra de colocar o . junto */
+    box-shadow: 0px 0px 24px 5px #0271f7;
+    
+}
+
+.personagem-selecionado{
+    /*background-color: green;*/
+    text-align: center; /*alinha texto*/
+    max-height: 530px;
+
+
+}
+
+.personagem-selecionado .personagem-grande{
+    width: 430px;
+    height: 430px;
+
+}
+
+.personagem-selecionado .nome-personagem{
+    border-bottom: 2px solid #47f4ff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+}
+
+.personagem-selecionado .descricao-personagem{
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 20px;
+    width: 420px;
+}
+
+

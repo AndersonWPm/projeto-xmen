@@ -1,0 +1,13 @@
+/*podemos estilizar a tag ou a classe */
+/* o asterisco * {} vai aplicar as propriedades para todo o código, todas as tags*/
+
+*{
+    margin: 0; /*espaçamento externo dos elementos*/
+    padding: 0;/*espaçamento interno dos elementos*/
+    box-sizing: border-box; /* trabalhar melhor com larguras*/
+
+
+}
+ul{
+    list-style: none; /*vai tirar as bolinhas do estilo de lista, do <li> dentro do <ul>*/
+}

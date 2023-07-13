@@ -1,0 +1,51 @@
+@media (max-width: 909px) {
+    .cabecalho .logo{
+        max-width: 190px;
+    }
+
+    .selecao-de-personagens{
+        /*flex-direction: column; sem, vai ficar uma seçãoem linha com outra seçõa, mascom essa propriedade ela vai colocar as sections uma embaixo da outra*/
+
+        flex-direction: column-reverse;
+        max-width: 430px;
+        margin: 0 auto; /*margem 0 em cima e em baixo, e auto da esquerda e direita, vai centralizar o conteúdo autoo. para centralizar*/
+    }
+
+    .selecao-de-personagens .personagens{
+        margin-top: 37px; /*vai dar margem entr as sections, o personagem seleconado e as esctritas dele eo Selecione m personagem*/
+    
+    }
+
+    .selecao-de-personagens .personagens .titlo{
+        font-size: 15px;
+
+    }
+
+    .selecao-de-personagens .lista-de-personagens{
+        gap: 9px;
+    }
+
+    .selecao-de-personagens .personagem img{
+        width: 90px;
+
+    }
+
+    .personagem-selecionado .personagem-grande{
+        width: 350px;
+        height: 350px;
+    }
+
+    .personagem-selecionado .descricao-personagem{
+        width: 80%;
+        font-size: 16px;
+        margin: 20px auto;
+
+    }
+
+
+}
+
+
+
+
+
